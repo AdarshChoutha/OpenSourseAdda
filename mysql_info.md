@@ -72,19 +72,3 @@
                 "completed_topics_id":[]
 #       }
 ##  }
-
-######
-
-
-CREATE TABLE # table_name # ( # col_name # json );
-SELECT JSON_STORAGE_SIZE( # json_col_name # ) FROM # table_name #;                  JSON_STORAGE_SIZE()
-SELECT JSON_TYPE('["a", true, 1]');                                                 JSON_TYPE()
-SELECT JSON_ARRAY('a', 1, NOW());                                                   JSON_ARRAY()
-SELECT JSON_OBJECT('key1', 1, 'key2', "abc");                                       JSON_OBJECT()
-SELECT JSON_MERGE_PRESERVE('["a", 1]', '{"key": "value"}');                         JSON_MERGE_PRESERVE()
-SELECT JSON_MERGE_PATCH('[1, 2]', '[true, false]')     Patch: [true, false]         JSON_MERGE_PATCH()
-SET @j = JSON_OBJECT('key', 'value');   SELECT @j;                                  @user_defined_variable
-SELECT JSON_VALID('null'), JSON_VALID('Null'), JSON_VALID('NULL');                  JSON_VALID()
-
-JSON ARRAY      ["JSON", 1, null, true]
-JSON OBJECT     { "key_1": "value_1", "key_2": "value_2" }
